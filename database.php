@@ -15,6 +15,7 @@ class Database
     private function __construct()
     {
         $this->conn = @new mysqli($this->baza['host'],$this->baza['user'],$this->baza['pass'],$this->baza['base']);
+        $this->conn->set_charset("utf8");
     }
 
     public static function getInstance()
